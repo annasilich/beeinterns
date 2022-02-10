@@ -1,0 +1,141 @@
+.main-topbar {
+  height: 71px;
+  padding-left: 55px;
+  padding-right: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-left {
+  display: flex;
+}
+
+.left-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.support-text {
+  margin-left: 28px;
+}
+
+.settings-text {
+  margin-left: 23px;
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 24px;
+  margin-left: 28px;
+  background: #d8d8d8;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+}
+
+.topbar-right {
+  display: flex;
+}
+
+.right-stat {
+  display: flex;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 7px 9px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  mix-blend-mode: normal;
+  border-radius: 5px;
+
+  font-size: 13px;
+}
+
+.energy-item {
+  padding: 3px;
+}
+
+.stat-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  box-shadow: 0px 0px 12px rgba(255, 71, 56, 0.5);
+}
+
+.item-grand {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.item-small {
+  margin-left: 4px;
+  margin-right: 6px;
+  font-size: 11px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.right-user {
+  display: flex;
+  align-items: center;
+  margin-left: 9px;
+}
+
+.user-info {
+  margin-left: 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name:hover {
+	opacity: 0.5;
+}
+
+.user-status {
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.status-round {
+  width: 6px;
+  height: 6px;
+  background: #24cb8d;
+  border-radius: 50%;
+}
+
+.status-text {
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #24cb8d;
+}
+
+.user-type {
+  align-self: start;
+  margin-top: 8px;
+  margin-left: 15px;
+  height: 14px;
+  padding: 2px 11px 2px 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, #6b69f9 0%, #6f6eff 100%);
+  box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.5);
+  border-radius: 4px;
+}
+
+.main-divider {
+  width: 100%;
+  height: 1px;
+  background: #d8d8d8;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+}

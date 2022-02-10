@@ -10,11 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/leftbar.css" />
+		<link rel="stylesheet" type="text/css" href="css/topbar.css" />
   </head>
   <body>
     <div class="leftbar unselectable">
-      <a href="#"><img src="img/logotype.svg" class="leftbar-logo" /></a>
+      <a href="#" class="leftbar-link"><img src="img/logotype.svg" class="leftbar-logo" /></a>
       <div class="divider leftbar-divider"></div>
       <nav class="leftbar-menu">
         <ul>
@@ -244,58 +246,66 @@
       <div class="divider menu-divider"></div>
       <div class="leftbar-switcher">
         <label for="switcher-button"
-          ><span
-            class="regular-text switcher-text"
+          ><span class="regular-text switcher-text"
             >Получать рассылку</span
           ></label
         >
         <div class="switcher-container">
           <div class="switcher-border"></div>
           <input
-						type="checkbox"
+            type="checkbox"
             class="switcher-button switcher-active"
             id="switcher-button"
             name="switcher-button"
-						
             checked
           />
         </div>
       </div>
     </div>
     <div class="main">
-      <div class="topbar"></div>
-      <div class="content"></div>
+      <div class="main-topbar">
+        <nav class="topbar-left unselectable">
+          <ul class="left-menu">
+            <li>
+              <a href="#"><span class="regular-text">FAQ</span></a>
+            </li>
+						<li>
+              <a href="#"><span class="regular-text support-text">Поддержка</span></a>
+            </li>
+						<li>
+              <a href="#"><span class="regular-text settings-text">Настройки</span></a>
+            </li>
+          </ul>
+					<div class="topbar-divider"></div>
+        </nav>
+				<div class="topbar-right">
+					<div class="right-stat">
+						<div class="stat-item">15 готовых дз</div>
+						<div class="stat-item">18 лекций</div>
+						<div class="stat-item energy-item">
+							<img src="img/energy_icon.svg" class="stat-icon"/>
+							<span class="item-grand">1200</span>
+							<span class="item-small">часов</span>
+						</div>
+					</div>
+					<div class="right-user">
+						<a href="#"><img src="img/avatar.png" /></a>
+						<div class="user-info"> 
+							<a href="#"><span class="user-name">Вася Пупкин</span></a>
+							<div class="user-status">
+								<div class="status-round"></div>
+								<span class="status-text">Online</span>
+							</div>
+						</div>
+						<div class="user-type">Pro</div>
+					</div>
+				</div>
+				
+      </div>
+			<div class="main-divider"></div>
+      <div class="main-content"></div>
     </div>
   </body>
 </html>
 
-<script>
-  function rotate(elem) {
-    let transform = elem.style.transform
-    transform = transform.replace(/[^0-9]/g, '')
-    let deg = transform != '' ? parseInt(transform) + 180 : 180
-
-    elem.style.webkitTransform = 'rotate(' + deg + 'deg)'
-    elem.style.mozTransform = 'rotate(' + deg + 'deg)'
-    elem.style.msTransform = 'rotate(' + deg + 'deg)'
-    elem.style.oTransform = 'rotate(' + deg + 'deg)'
-    elem.style.transform = 'rotate(' + deg + 'deg)'
-  }
-
-  function toggle(elemId) {
-    const elem = document.getElementById(elemId)
-    const itemContainer = elem.firstElementChild
-    const arrows = itemContainer.getElementsByClassName('item-arrow')
-    const submenus = elem.getElementsByClassName('menu-submenu')
-
-    if (arrows.length !== 0) {
-      rotate(arrows[0])
-
-      if (submenus.length !== 0) {
-        if (submenus[0].style.display === 'none')
-          submenus[0].style.display = 'block'
-        else submenus[0].style.display = 'none'
-      }
-    }
-  }
-</script>
+<script src="index.js"></script>
