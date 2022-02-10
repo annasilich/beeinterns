@@ -13,13 +13,13 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <div class="leftbar">
-      <img src="img/logotype.svg" class="leftbar-logo" />
+    <div class="leftbar unselectable">
+      <a href="#"><img src="img/logotype.svg" class="leftbar-logo" /></a>
       <div class="divider leftbar-divider"></div>
       <nav class="leftbar-menu">
         <ul>
-          <li class="menu-item">
-            <div class="item-container">
+          <li class="menu-item" id="program-item">
+            <div class="item-container" onclick="toggle('program-item')">
               <span class="item-title">Программа</span>
               <svg
                 width="10"
@@ -36,11 +36,13 @@
               </svg>
             </div>
           </li>
-          <li class="menu-item">
-            <span class="item-title">Менторы</span>
+          <li class="menu-item" id="mentors-item">
+            <div class="item-container" onclick="toggle('mentors-item')">
+              <a href="#"><span class="item-title">Менторы</span></a>
+            </div>
           </li>
-          <li class="menu-item">
-            <div class="item-container">
+          <li class="menu-item" id="lectures-item">
+            <div class="item-container" onclick="toggle('lectures-item')">
               <span class="item-title">Лекции</span>
               <svg
                 width="10"
@@ -58,7 +60,7 @@
             </div>
 
             <ul class="menu-submenu">
-              <li class="submenu-item">
+              <li class="submenu-item active">
                 <svg
                   width="18"
                   height="18"
@@ -76,10 +78,14 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title html-title"
-                  >HTML/CSS</span
+                <a href="#"
+                  ><span class="regular-text submenu-title html-title"
+                    >HTML/CSS</span
+                  ></a
                 >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
               <li class="submenu-item">
                 <svg
@@ -99,8 +105,14 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title git-title">GIT</span>
+                <a href="#"
+                  ><span class="regular-text submenu-title git-title"
+                    >GIT</span
+                  ></a
+                >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
               <li class="submenu-item">
                 <svg
@@ -118,10 +130,14 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title js-title"
-                  >JavaScript</span
+                <a href="#"
+                  ><span class="regular-text submenu-title js-title"
+                    >JavaScript</span
+                  ></a
                 >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
               <li class="submenu-item">
                 <svg
@@ -141,10 +157,14 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title react-title"
-                  >React</span
+                <a href="#"
+                  ><span class="regular-text submenu-title react-title"
+                    >React</span
+                  ></a
                 >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
               <li class="submenu-item">
                 <svg
@@ -164,10 +184,14 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title angular-title"
-                  >Angular</span
+                <a href="#"
+                  ><span class="regular-text submenu-title angular-title"
+                    >Angular</span
+                  ></a
                 >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
               <li class="submenu-item">
                 <svg
@@ -187,28 +211,54 @@
                     class="submenu-icon"
                   />
                 </svg>
-
-                <span class="regular-text submenu-title data-title">Data</span>
+                <a href="#"
+                  ><span class="regular-text submenu-title data-title"
+                    >Data</span
+                  ></a
+                >
+                <div class="item-background">
+                  <div class="background-border"></div>
+                </div>
               </li>
             </ul>
           </li>
-          <li class="menu-item">
-            <span class="item-title">Правила поступления</span>
+          <li class="menu-item" id="rules-item">
+            <div class="item-container" onclick="toggle('rules-item')">
+              <a href="#"
+                ><span class="item-title">Правила поступления</span></a
+              >
+            </div>
           </li>
-          <li class="menu-item">
-            <span class="item-title">Новости</span>
+          <li class="menu-item" id="news-item">
+            <div class="item-container" onclick="toggle('news-item')">
+              <a href="#"><span class="item-title">Новости</span></a>
+            </div>
           </li>
-          <li class="menu-item">
-            <span class="item-title">Обратная связь</span>
+          <li class="menu-item" id="feedback-item">
+            <div class="item-container" onclick="toggle('feedback-item')">
+              <a href="#"><span class="item-title">Обратная связь</span></a>
+            </div>
           </li>
         </ul>
       </nav>
       <div class="divider menu-divider"></div>
       <div class="leftbar-switcher">
-        <span class="regular-text switcher-text">Получать рассылку</span>
+        <label for="switcher-button"
+          ><span
+            class="regular-text switcher-text"
+            >Получать рассылку</span
+          ></label
+        >
         <div class="switcher-container">
           <div class="switcher-border"></div>
-          <div class="switcher-button"></div>
+          <input
+						type="checkbox"
+            class="switcher-button switcher-active"
+            id="switcher-button"
+            name="switcher-button"
+						
+            checked
+          />
         </div>
       </div>
     </div>
@@ -218,3 +268,34 @@
     </div>
   </body>
 </html>
+
+<script>
+  function rotate(elem) {
+    let transform = elem.style.transform
+    transform = transform.replace(/[^0-9]/g, '')
+    let deg = transform != '' ? parseInt(transform) + 180 : 180
+
+    elem.style.webkitTransform = 'rotate(' + deg + 'deg)'
+    elem.style.mozTransform = 'rotate(' + deg + 'deg)'
+    elem.style.msTransform = 'rotate(' + deg + 'deg)'
+    elem.style.oTransform = 'rotate(' + deg + 'deg)'
+    elem.style.transform = 'rotate(' + deg + 'deg)'
+  }
+
+  function toggle(elemId) {
+    const elem = document.getElementById(elemId)
+    const itemContainer = elem.firstElementChild
+    const arrows = itemContainer.getElementsByClassName('item-arrow')
+    const submenus = elem.getElementsByClassName('menu-submenu')
+
+    if (arrows.length !== 0) {
+      rotate(arrows[0])
+
+      if (submenus.length !== 0) {
+        if (submenus[0].style.display === 'none')
+          submenus[0].style.display = 'block'
+        else submenus[0].style.display = 'none'
+      }
+    }
+  }
+</script>
