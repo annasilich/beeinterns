@@ -1,13 +1,17 @@
 .main-topbar {
   height: 71px;
-	min-height: 71px;
+  min-height: 71px;
   padding-left: 55px;
   padding-right: 45px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-	
-	white-space: nowrap;
+
+  white-space: nowrap;
+}
+
+.topbar-logo {
+  display: none;
 }
 
 .topbar-left {
@@ -32,6 +36,7 @@
   width: 1px;
   height: 24px;
   margin-left: 28px;
+  margin-right: 28px;
   background: #d8d8d8;
   opacity: 0.1;
 }
@@ -133,4 +138,66 @@
   height: 1px;
   background: #d8d8d8;
   opacity: 0.1;
+}
+
+@media screen and (max-width: 1155px) {
+  .right-stat {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .topbar-left {
+    display: none;
+  }
+  .main-topbar {
+    padding: 0 25px;
+    min-width: 290px;
+    justify-content: end;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .topbar-logo {
+    display: flex;
+  }
+  .topbar-left {
+    display: none;
+  }
+  .main-topbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .topbar-logo {
+    display: flex;
+  }
+  .topbar-left {
+    display: none;
+  }
+  .main-topbar {
+    justify-content: space-between;
+  }
+  .user-type {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .topbar-logo {
+    display: flex;
+  }
+  .topbar-left {
+    display: none;
+  }
+  .main-topbar {
+    justify-content: space-between;
+  }
+  .user-info {
+    display: none;
+  }
+  .user-type {
+    display: none;
+  }
 }

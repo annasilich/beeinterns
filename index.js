@@ -26,3 +26,36 @@ function toggle(elemId) {
 		}
 	}
 }
+
+let positions = { 
+	base: 1,
+	pro: 1
+}
+
+function slide(direction, collection) {
+	const el = document.querySelector('#' + collection + ' .course-items')
+	const pos = positions[collection]
+
+	if (direction === 'left') {
+		const scrollTo = el.querySelector('.item-card:nth-of-type(' + (pos - 1) + ')')
+		
+		if (!scrollTo) {
+			return
+		}
+
+		scrollTo.scrollIntoView({ inline: 'start', block: "center"})
+		positions[collection]--
+
+
+	}
+	else {
+		const scrollTo = el.querySelector('.item-card:nth-of-type(' + (pos + 1) + ')')
+
+		if (!scrollTo) {
+			return
+		}
+
+		scrollTo.scrollIntoView({ inline: 'start', block: "center"})
+		positions[collection]++
+	}
+}

@@ -15,6 +15,8 @@
 .course-header {
   display: flex;
   justify-content: space-between;
+	flex-wrap: wrap;
+  gap: 10px;
 }
 
 .header-info {
@@ -61,7 +63,7 @@
 
 .regular-btn {
   font-size: 13px;
-  padding: 10px 22px 10px 15px;
+  padding: 10px 18px 10px 18px;
 }
 
 .btn-arrow {
@@ -94,12 +96,16 @@
 	display: flex;
   margin-top: 25px;
 	gap: 11px;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	padding-right: 100%;
 }
 
 .item-card {
 	position: relative;
 	display: flex;
   flex-direction: column;
+	min-width: 255px;
   width: 255px;
   height: 294px;
   background: rgba(255, 255, 255, 0.04);
@@ -160,4 +166,22 @@
 
 .card-date {
 	font-size: 13px;
+}
+
+@media screen and (max-width: 850px) {
+	.main-content {
+		margin: 0 25px;
+	}
+	.content-course {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main-topbar {
+		min-width: 290px;
+	}
+	.content-course {
+		margin-top: 20px;
+	}
 }

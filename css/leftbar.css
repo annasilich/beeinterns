@@ -31,6 +31,7 @@
 
 .leftbar-menu {
   margin-top: 17px;
+	overflow: auto;
 }
 
 .menu-item {
@@ -224,4 +225,27 @@
 
 .switcher-text:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 576px) {
+	.leftbar {
+		display: none;
+	}
+	.leftbar-link {
+		display: flex;
+		align-items: center;
+	}
+	.leftbar-logo {
+		align-self: unset;
+		margin: 0;
+	}
+	.leftbar-menu {
+		display: none;
+	}
+	.menu-divider{
+		display: none;
+	}
+	.leftbar-switcher {
+		display: none;
+	}
 }

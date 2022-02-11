@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/leftbar.css" />
     <link rel="stylesheet" type="text/css" href="css/topbar.css" />
     <link rel="stylesheet" type="text/css" href="css/content.css" />
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
     <div class="leftbar unselectable">
@@ -267,6 +269,12 @@
     </div>
     <div class="main">
       <div class="main-topbar">
+        <div class="topbar-logo">
+          <a href="#" class="leftbar-link"
+            ><img src="img/logotype.svg" class="leftbar-logo"
+          /></a>
+        </div>
+
         <nav class="topbar-left unselectable">
           <ul class="left-menu">
             <li>
@@ -312,7 +320,7 @@
       <div class="main-divider"></div>
 
       <div class="main-content">
-        <div class="content-course">
+        <div class="content-course" id="base">
           <div class="course-header">
             <div class="header-info">
               <span class="info-level">Базовый уровень</span>
@@ -320,7 +328,7 @@
             </div>
             <div class="header-btns">
               <button class="btn small-btn">Все лекции</button>
-              <button class="btn-arrow">
+              <button class="btn-arrow" onclick="slide('left', 'base')">
                 <div class="btn-border"></div>
                 <svg
                   width="6"
@@ -336,14 +344,14 @@
                   />
                 </svg>
               </button>
-              <button class="btn-arrow">
+              <button class="btn-arrow" onclick="slide('right', 'base')">
                 <div class="btn-border"></div>
                 <svg
                   width="6"
                   height="10"
                   viewBox="0 0 6 10"
                   fill="none"
-									class="arrow"
+                  class="arrow"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -357,7 +365,7 @@
           <div class="course-items">
             <div class="item-card">
               <img src="img/card_img1.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">Структура HTML</span>
@@ -365,15 +373,15 @@
                   >Назначение блоков: head, body</span
                 >
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">01.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img2.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">Подключение стилей</span>
@@ -381,15 +389,15 @@
                   >Виды подключения стилей. Подключение шрифтов</span
                 >
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">03.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img3.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">CSS</span>
@@ -397,23 +405,21 @@
                   >Базовый синтаксис CSS: селекторы, классы</span
                 >
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">08.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img4.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">Наследие и каскад</span>
-                <span class="card-description"
-                  >Наследие и каскад</span
-                >
+                <span class="card-description">Наследие и каскад</span>
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">10.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
@@ -421,7 +427,7 @@
             </div>
           </div>
         </div>
-				<div class="content-course course-margin">
+        <div class="content-course course-margin" id="pro">
           <div class="course-header">
             <div class="header-info">
               <span class="info-level">Продвинутый уровень</span>
@@ -429,7 +435,7 @@
             </div>
             <div class="header-btns">
               <button class="btn small-btn">Все лекции</button>
-              <button class="btn-arrow">
+              <button class="btn-arrow" onclick="slide('left','pro')"> 
                 <div class="btn-border"></div>
                 <svg
                   width="6"
@@ -446,13 +452,13 @@
                 </svg>
               </button>
               <button class="btn-arrow">
-                <div class="btn-border"></div>
+                <div class="btn-border" onclick="slide('right','pro')"></div>
                 <svg
                   width="6"
                   height="10"
                   viewBox="0 0 6 10"
                   fill="none"
-									class="arrow"
+                  class="arrow"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -466,23 +472,21 @@
           <div class="course-items">
             <div class="item-card">
               <img src="img/card_img1.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">HTML-формы</span>
-                <span class="card-description"
-                  >HTML-формы</span
-                >
+                <span class="card-description">HTML-формы</span>
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">01.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img2.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">Flex</span>
@@ -490,15 +494,15 @@
                   >Принципы современной верстки сайта на flex</span
                 >
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">03.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img3.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">Media и viewport</span>
@@ -506,23 +510,21 @@
                   >Адаптивная верстка. Использование media и viewport</span
                 >
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">08.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
               </div>
             </div>
-						<div class="item-card">
+            <div class="item-card">
               <img src="img/card_img4.jpg" class="card-img" />
-							
+
               <div class="card-type">Лекция</div>
               <div class="card-info">
                 <span class="card-name">CSS Grid</span>
-                <span class="card-description"
-                  >CSS Grid</span
-                >
+                <span class="card-description">CSS Grid</span>
               </div>
-							<div class="card-divider"></div>
+              <div class="card-divider"></div>
               <div class="card-metadata">
                 <span class="card-date">10.02.2022</span>
                 <button class="btn regular-btn">Смотреть</button>
