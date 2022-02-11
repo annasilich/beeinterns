@@ -12,11 +12,14 @@
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/leftbar.css" />
-		<link rel="stylesheet" type="text/css" href="css/topbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/topbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
   </head>
   <body>
     <div class="leftbar unselectable">
-      <a href="#" class="leftbar-link"><img src="img/logotype.svg" class="leftbar-logo" /></a>
+      <a href="#" class="leftbar-link"
+        ><img src="img/logotype.svg" class="leftbar-logo"
+      /></a>
       <div class="divider leftbar-divider"></div>
       <nav class="leftbar-menu">
         <ul>
@@ -269,41 +272,265 @@
             <li>
               <a href="#"><span class="regular-text">FAQ</span></a>
             </li>
-						<li>
-              <a href="#"><span class="regular-text support-text">Поддержка</span></a>
+            <li>
+              <a href="#"
+                ><span class="regular-text support-text">Поддержка</span></a
+              >
             </li>
-						<li>
-              <a href="#"><span class="regular-text settings-text">Настройки</span></a>
+            <li>
+              <a href="#"
+                ><span class="regular-text settings-text">Настройки</span></a
+              >
             </li>
           </ul>
-					<div class="topbar-divider"></div>
+          <div class="topbar-divider"></div>
         </nav>
-				<div class="topbar-right">
-					<div class="right-stat">
-						<div class="stat-item">15 готовых дз</div>
-						<div class="stat-item">18 лекций</div>
-						<div class="stat-item energy-item">
-							<img src="img/energy_icon.svg" class="stat-icon"/>
-							<span class="item-grand">1200</span>
-							<span class="item-small">часов</span>
-						</div>
-					</div>
-					<div class="right-user">
-						<a href="#"><img src="img/avatar.png" /></a>
-						<div class="user-info"> 
-							<a href="#"><span class="user-name">Вася Пупкин</span></a>
-							<div class="user-status">
-								<div class="status-round"></div>
-								<span class="status-text">Online</span>
-							</div>
-						</div>
-						<div class="user-type">Pro</div>
-					</div>
-				</div>
-				
+        <div class="topbar-right">
+          <div class="right-stat">
+            <div class="stat-item">15 готовых дз</div>
+            <div class="stat-item">18 лекций</div>
+            <div class="stat-item energy-item">
+              <img src="img/energy_icon.svg" class="stat-icon" />
+              <span class="item-grand">1200</span>
+              <span class="item-small">часов</span>
+            </div>
+          </div>
+          <div class="right-user">
+            <a href="#"><img src="img/avatar.png" /></a>
+            <div class="user-info">
+              <a href="#"><span>Вася Пупкин</span></a>
+              <div class="user-status">
+                <div class="status-round"></div>
+                <span class="status-text">Online</span>
+              </div>
+            </div>
+            <div class="user-type">Pro</div>
+          </div>
+        </div>
       </div>
-			<div class="main-divider"></div>
-      <div class="main-content"></div>
+
+      <div class="main-divider"></div>
+
+      <div class="main-content">
+        <div class="content-course">
+          <div class="course-header">
+            <div class="header-info">
+              <span class="info-level">Базовый уровень</span>
+              <span class="info-name">HTML/CSS</span>
+            </div>
+            <div class="header-btns">
+              <button class="btn small-btn">Все лекции</button>
+              <button class="btn-arrow">
+                <div class="btn-border"></div>
+                <svg
+                  width="6"
+                  height="10"
+                  viewBox="0 0 6 10"
+                  fill="none"
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 8.82979L4.87606 10L0 4.9232L4.72854 0L5.77219 1.08662L2.1676 4.83961L6 8.82979Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <button class="btn-arrow">
+                <div class="btn-border"></div>
+                <svg
+                  width="6"
+                  height="10"
+                  viewBox="0 0 6 10"
+                  fill="none"
+									class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 8.82979L3.8324 4.83961L0.227807 1.08662L1.27146 0L6 4.9232L1.12394 10L0 8.82979Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="course-items">
+            <div class="item-card">
+              <img src="img/card_img1.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">Структура HTML</span>
+                <span class="card-description"
+                  >Назначение блоков: head, body</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">01.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img2.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">Подключение стилей</span>
+                <span class="card-description"
+                  >Виды подключения стилей. Подключение шрифтов</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">03.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img3.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">CSS</span>
+                <span class="card-description"
+                  >Базовый синтаксис CSS: селекторы, классы</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">08.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img4.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">Наследие и каскад</span>
+                <span class="card-description"
+                  >Наследие и каскад</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">10.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+				<div class="content-course course-margin">
+          <div class="course-header">
+            <div class="header-info">
+              <span class="info-level">Продвинутый уровень</span>
+              <span class="info-name">HTML/CSS</span>
+            </div>
+            <div class="header-btns">
+              <button class="btn small-btn">Все лекции</button>
+              <button class="btn-arrow">
+                <div class="btn-border"></div>
+                <svg
+                  width="6"
+                  height="10"
+                  viewBox="0 0 6 10"
+                  fill="none"
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 8.82979L4.87606 10L0 4.9232L4.72854 0L5.77219 1.08662L2.1676 4.83961L6 8.82979Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <button class="btn-arrow">
+                <div class="btn-border"></div>
+                <svg
+                  width="6"
+                  height="10"
+                  viewBox="0 0 6 10"
+                  fill="none"
+									class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 8.82979L3.8324 4.83961L0.227807 1.08662L1.27146 0L6 4.9232L1.12394 10L0 8.82979Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="course-items">
+            <div class="item-card">
+              <img src="img/card_img1.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">HTML-формы</span>
+                <span class="card-description"
+                  >HTML-формы</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">01.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img2.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">Flex</span>
+                <span class="card-description"
+                  >Принципы современной верстки сайта на flex</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">03.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img3.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">Media и viewport</span>
+                <span class="card-description"
+                  >Адаптивная верстка. Использование media и viewport</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">08.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+						<div class="item-card">
+              <img src="img/card_img4.jpg" class="card-img" />
+							
+              <div class="card-type">Лекция</div>
+              <div class="card-info">
+                <span class="card-name">CSS Grid</span>
+                <span class="card-description"
+                  >CSS Grid</span
+                >
+              </div>
+							<div class="card-divider"></div>
+              <div class="card-metadata">
+                <span class="card-date">10.02.2022</span>
+                <button class="btn regular-btn">Смотреть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
